@@ -2,7 +2,7 @@ site_name: hello-architect
 repo_name: GepengCn/hello-architect
 repo_url: https://github.com/GepengCn/hello-architect.git
 edit_uri: https://github.com/GepengCn/hello-architect/tree/main/docs/
-copyright: <a href="https://beian.miit.gov.cn">京ICP备2023028894号</a> &copy; 2023 gepeng
+copyright: <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2023028894号-1</a> &copy; 2023 gepeng
 extra:
     generator: false
     social:
