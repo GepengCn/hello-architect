@@ -1,0 +1,1 @@
+Spring Boot Starters 可以理解为 Spring Boot 的“启动包”。它们像是预先配置好的配料包，你只需要添加到你的项目中，Spring Boot 就会自动为你准备好相应的环境和配置。比如，如果你想建一个 web 应用，只需添加 `spring-boot-starter-web` 启动包，Spring Boot 就会加载所有创建 web 应用所需的依赖，如 Spring MVC、Tomcat 等，无需你手动一一添加，大大简化了项目的配置过程。

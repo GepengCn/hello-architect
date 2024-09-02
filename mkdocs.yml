@@ -1,0 +1,139 @@
+site_name: hello-architect
+repo_name: GepengCn/hello-architect
+repo_url: https://github.com/GepengCn/hello-architect.git
+edit_uri: https://github.com/GepengCn/hello-architect/tree/main/docs/
+copyright: <a href="https://beian.miit.gov.cn">京ICP备2023028894号</a> &copy; 2023 gepeng
+extra:
+    generator: false
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/GepengCn/hello-architect
+          name: gepeng
+theme:
+    features:
+        - content.action.edit
+        - content.code.annotate
+        - content.code.copy
+        - content.tabs.link
+        - content.tooltips
+        - navigation.tabs
+        - navigation.sections
+        - navigation.top
+        - navigation.footer
+        - navigation.tracking
+        - search.highlight
+        - search.share
+        - search.suggest
+        - toc.follow
+    icon:
+        repo: fontawesome/brands/git
+        logo: material/library
+    name: material
+    language: zh
+    font:
+        text: Noto Sans Simplified Chinese
+        code: Roboto Mono
+    palette:
+        - scheme: default
+          primary: white
+          accent: cyan
+          toggle:
+                icon: material/brightness-7
+                name: Switch to dark mode
+        - scheme: slate
+          primary: black
+          accent: grey
+          toggle:
+                icon: material/brightness-4
+                name: Switch to light mode
+extra_javascript:
+    - javascripts/mathjax.js
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra_css:
+    - stylesheets/extra.css
+markdown_extensions:
+    - toc:
+        permalink: true
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    - pymdownx.tabbed:
+        alternate_style: true
+    - attr_list
+    - tables
+    - md_in_html
+    - pymdownx.arithmatex:
+        generic: true
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.tabbed:
+        alternate_style: true
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tilde
+
+nav:
+    - 首页: index.md
+    - Java:
+          - HashMap:
+                - HashMap简介: hashmap/hashmap.md
+                - JDK8前后的变化以及如何保证顺序和线程安全: hashmap/hashmapext.md
+                - JDK8之后扩容机制怎么优化的: hashmap/expand.md
+                - 什么是扰动函数,怎么实现的: hashmap/disturbed.md
+                - 为什么需要链表: hashmap/linkedlist.md
+                - 为什么要用红黑树？红黑树是什么？红黑树需要满足什么条件？有什么优势？与平衡二叉树的区别？使用场景？: hashmap/rbtree.md
+                - 为什么改为尾插法，头插法有什么弊端: hashmap/tail.md
+                - 链表和红黑树转换的阈值是多少，为什么不一样: hashmap/threshold.md
+                - 怎么扩容: hashmap/expandthe.md
+                - HashMap为什么重写equals之后，必须重写hashcode: hashmap/equalshashcode.md
+                - LinkedHashMap怎么实现有序，有哪些顺序，LRU顺序是什么？算法原理是什么？: hashmap/lru.md
+                - 描述下HashMap的put操作: hashmap/put.md
+                - ConcurrentHashMap描述下？jdk8前后有什么变化？怎么保证的线程安全？: hashmap/concurrentmap.md
+                - HashMap的长度为什么是2的幂次方: hashmap/2mi.md
+          - Concurrent:
+
+                - 并发编程三个重要特性: concurrent/feature.md
+                - synchronized 是什么？有什么用？synchronized 底层原理了解吗？JDK1.6 之后的 synchronized 底层做了哪些优化？: concurrent/synchronized.md
+                - ReentrantLock 是什么？synchronized 和 ReentrantLock 有什么区别？: concurrent/reentrantLock.md
+                - ThreadLocal是什么？有什么用？原理了解吗？它的内存泄露问题是怎么导致的？: concurrent/threadLocal.md
+                - 什么是线程池?为什么要用线程池？如何创建线程池？为什么不推荐使用内置线程池？线程池常见参数有哪些？如何解释？线程池的饱和策略有哪些？线程池常用的阻塞队列有哪些？线程池处理任务的流程了解吗？如何给线程池命名？如何设定线程池的大小？如何动态修改线程池的参数？: concurrent/threadpool.md
+
+                - Future 类有什么用？Callable 和 Future 有什么关系？CompletableFuture 类有什么用？: concurrent/future.md
+                - AQS 是什么？AQS 的原理是什么？Semaphore 有什么用？Semaphore 的原理是什么？CountDownLatch 有什么用？CountDownLatch 的原理是什么？用过 CountDownLatch 么？什么场景下用的？CyclicBarrier 有什么用？CyclicBarrier 的原理是什么？: concurrent/aqs.md
+
+          - Spring:
+                谈谈自己对于 Spring IoC 的了解?怎么解决循环依赖的?: spring/spring.md
+                Bean 的作用域有哪些?Bean 的生命周期了解么?: spring/bean.md
+                谈谈自己对于 AOP 的了解?AOP通知类型有哪些？多个切面的执行顺序如何控制？: spring/aop.md
+                说说自己对于 Spring MVC 了解?Spring MVC 的核心组件有哪些？SpringMVC 工作原理了解吗?: spring/springmvc.md
+
+    - 微服务:
+        - 为什么要有SpringBoot？优缺点是什么？: spring/springboot.md
+        - 什么是Spring Boot Starters?: spring/springbootstarters.md
+        - 介绍下@SpringBootApplication注解?Spring Boot 自动装配是什么？如何实现的？: spring/springbootapp.md
+        - SpringCloud中，为什么要有注册中心?: spring/registery.md
+        - SpringCloud中，服务间怎么通信的?: spring/communicate.md
+        - 服务熔断、限流、降级了解吗？: spring/server_destroy.md
+        - 配置中心有什么用？: spring/config.md
+        - 用过网关吗？有什么用？: spring/gateway.md
+        - 怎么链路追踪呢？: spring/trace.md
+    - 架构设计:
+        - 简单说一下 SQL 调优思路: architect/sql.md
+        - 简单说一下大表优化的思路: architect/big_table.md
+        - 读写分离: architect/read_write.md
+        - 分库分表: architect/ext.md
+        - 常见的分片算法有哪些？: architect/sharding.md
+        - Redis: architect/redis.md
+        - 阅读 Spring 源码的时候什么设计模式最让你影响深刻？能简单讲讲吗？: architect/spring.md
+        - 假如有 10 亿个数，只有一个重复，内存只能放下 5 亿个数，怎么找到这个重复的数字？: architect/bitmap.md
+        - B树B+树有什么优点，为什么比红黑树更好？: architect/btree.md
+        - 秒杀系统怎么设计?: architect/ms.md
+        - 怎么保证数据的一致性？: architect/const.md
+        - 如何实现一个RPC框架?: architect/rpc.md
+        - 如何设计一个排行榜?: architect/rank.md
+        - 如何设计一个短链系统?: architect/shorturl.md
+        - 如何解决大文件上传问题？: architect/big_file.md
+    - 中间件: 
+        - 消息队列如何解决消息丢失问题？:  mid/mqlost.md
+        - 消息队列有可能发生重复消费，如何避免，如何做到幂等？: mid/equals.md
